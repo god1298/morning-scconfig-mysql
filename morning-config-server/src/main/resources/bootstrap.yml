@@ -1,0 +1,17 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: morning-config-server
+  profiles:
+    active: dbenv
+  cloud:
+    config:
+      server:
+        databases: true
+        default-label: master
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://ip:port/db
+    username: hello
+    password: world
